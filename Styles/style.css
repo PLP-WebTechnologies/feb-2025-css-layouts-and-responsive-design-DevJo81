@@ -1,0 +1,228 @@
+body {
+    background-color: cornsilk;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    display: flex;
+    justify-content: space-between; 
+    align-items: center;
+    padding: 20px;
+    background-color: cornsilk;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 20px;
+}
+nav ul li a {
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+}
+
+.text {
+    color: black;
+    font-size: 2rem;
+    text-align: center;
+}
+
+.container {
+    width: 80%;
+    background-color: navajowhite;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+@media (max-width: 480px) and (orientation: portrait) {
+    .container {
+        width: 80%;
+        margin: 0;
+        background-color: lightcoral;
+    }
+
+    img {
+        display: none;
+    }
+
+    body {
+        background-color: brown;
+        font-size: 1.5em;
+    }
+    
+    header {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav ul {
+        display: none;
+    }
+    nav ul li a {
+        display: none;
+    }
+
+    .flex-container {
+        display: none;
+        h1 {
+            display: none;
+        }
+    }
+
+    .flex-item {
+        display: none;
+    }
+
+    .grid-container {
+        display: none;
+    }
+    .grid-item1 {
+        display: none;
+    }
+    .grid-item2 {
+        display: none;
+    }
+    .grid-item3 {
+        display: none;
+    }
+    .grid-item4 {
+        display: none;
+    }
+}
+
+@media (max-width:1024px) and (min-width: 481px) {
+    .container {
+        width: 80%;
+        margin: 0;
+        background-color: lightcoral;
+    }
+
+    img {
+        max-width: 90%;
+        height: auto;
+    }
+
+    body {
+        background-color: brown;
+        font-size: 1.5em;
+    }
+    
+    header {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .flex-container {
+        display: none;
+        h1 {
+            display: none;
+        }
+    }
+    .flex-item {
+        display: none;
+    }
+
+    .grid-container {
+        grid-template-columns: 
+            'home'
+            'about'
+            'services'
+            'contact'
+    }
+}
+
+@media (min-width: 1025px) {
+    .container {
+        width: 80%;
+        margin: 0;
+        background-color: lightcoral;
+    }
+
+    img {
+        max-width: 100%;
+        height: auto;
+    }
+
+    body {
+        background-color: brown;
+        font-size: 1.5em;
+    }
+    
+    header {
+        display: flex;
+        justify-content: space-between; 
+        align-items: center;
+        padding: 20px;
+        background-color: cornsilk;
+    }
+    
+    nav ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        gap: 20px;
+    }
+    nav ul li a {
+        text-decoration: none;
+        color: black;
+        font-weight: bold;
+    }
+    
+    .text {
+        color: black;
+        font-size: 2rem;
+        text-align: center;
+    }
+}
+
+/* flexible box layout */
+.flex-container {
+    display: flex; 
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    height: 60vh;
+    background-color: cornsilk;
+    gap: 10px;
+}
+
+.flex-item{
+    background-color: lightgrey;
+    padding: 20px;
+    flex: 1;
+}
+
+/* grid layout */
+.grid-container {
+    display: grid;
+    grid-template-columns: 1fr, 2fr, 1fr;
+    grid-template-rows: 1fr, 2fr;
+    grid-template-areas:
+        'home home home'
+        'about services contact';
+    grid-gap: 10px;
+    padding: 10px;
+    background-color: lightslategrey;
+    height: 100px;
+}
+
+.grid-item1{ grid-area: home; background-color: lightcyan; text-align: center; text-decoration: none; color: black;}
+.grid-item2{ grid-area: about; background-color: lightgoldenrodyellow; text-decoration: none; color: black;}
+.grid-item3{ grid-area: services; background-color: lightsteelblue; text-decoration: none; color: black;}
+.grid-item4{ grid-area: contact; background-color: lightgray; text-decoration: none; color: black;}
+
+.footer {
+    background-color: cornsilk;
+    text-align: center;
+    text-decoration: none;
+    color: black;
+}
